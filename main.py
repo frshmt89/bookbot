@@ -3,7 +3,14 @@ def get_book_text(filepath):
         book = f.read()
     return book
 
-def main():
-    print(get_book_text("./books/frankenstein.txt"))
+def wordcount(text):
+    return len(text.split())
 
-main()
+book_name = get_book_text("./books/frankenstein.txt")
+num_words = wordcount(book_name)
+print(f"{num_words} words found in the document")
+
+# def main():
+#     print(get_book_text("./books/frankenstein.txt"))
+
+# main()
