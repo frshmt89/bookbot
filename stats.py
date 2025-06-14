@@ -11,3 +11,10 @@ def convert(book):
         else:
             count[char] = 1
     return count
+
+def sorted(count):
+    characters = []
+    for char, num in count.items():
+        characters.append({"char": char, "num": num})
+    characters.sort(reverse=True, key= lambda d: d["num"])
+    return characters
